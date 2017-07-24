@@ -23,12 +23,12 @@ public class Officer {
 	private String rank;
 
 	@ManyToOne
-	@JoinColumn(name="JAIL_ID")
+	@JoinColumn(name = "JAIL_ID")
 	private Jail officerJail;
-	
+
 	@OneToOne
 	@JoinColumn(name = "TRUSTEE_ID")
-	private Inmate inmate;
+	private Inmate trustee;
 
 	public Long getId() {
 		return id;
@@ -55,11 +55,11 @@ public class Officer {
 	}
 
 	public Inmate getInmate() {
-		return inmate;
+		return trustee;
 	}
 
 	public void setInmate(Inmate inmate) {
-		this.inmate = inmate;
+		this.trustee = inmate;
 	}
 
 }
