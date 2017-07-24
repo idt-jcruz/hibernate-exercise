@@ -9,9 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Jail {
@@ -28,7 +26,7 @@ public class Jail {
 
 	@Column(nullable = false)
 	private int jailCapacity;
-	 
+
 	@Enumerated(EnumType.STRING)
 	private Region region;
 
