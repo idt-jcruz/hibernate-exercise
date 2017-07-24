@@ -6,6 +6,7 @@ public enum Region {
 	REGION_I("Ilocos Region"),
 	CAR("Cordillera Administrative Region"),
 	REGION_XII("SOCCSKSARGEN"),
+	REGION_IX("Davao Region"),
 	ARMM("Autonomous Region in Muslim Mindanao");
 
     private final String regionName;   
