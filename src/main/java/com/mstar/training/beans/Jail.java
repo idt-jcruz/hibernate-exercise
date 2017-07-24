@@ -19,15 +19,16 @@ public class Jail {
 	private Long id;
 
 	@Column(nullable = false)
-	private String jailName;
+	private String name;
 
 	@Column(nullable = false)
-	private String jailAddress;
+	private String address;
 
 	@Column(nullable = false)
-	private int jailCapacity;
+	private int capacity;
 
 	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
 	private Region region;
 
 	@OneToMany(mappedBy = "officerJail")
@@ -44,28 +45,28 @@ public class Jail {
 		this.id = id;
 	}
 
-	public String getJailName() {
-		return jailName;
+	public String getName() {
+		return name;
 	}
 
-	public void setJailName(String jailName) {
-		this.jailName = jailName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getJailAddress() {
-		return jailAddress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setJailAddress(String jailAddress) {
-		this.jailAddress = jailAddress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public int getJailCapacity() {
-		return jailCapacity;
+	public int getCapacity() {
+		return capacity;
 	}
 
-	public void setJailCapacity(int jailCapacity) {
-		this.jailCapacity = jailCapacity;
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
 	}
 
 	public Region getRegion() {
