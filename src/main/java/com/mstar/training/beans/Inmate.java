@@ -22,11 +22,12 @@ public class Inmate {
 
 	@Column(name = "CONTROL_NUMBER", nullable = false)
 	private String controlNumber;
-
+	
+	@Column(nullable=false)
 	private String inmateStatus;
 	
 	@ManyToOne
-	@JoinColumn(name = "JAIL_ID", nullable = false)
+	@JoinColumn(name = "JAIL_ID")
 	private Jail inmateJail;
 
 	@Column(name = "COMMITMENT_DATE", nullable = false)
