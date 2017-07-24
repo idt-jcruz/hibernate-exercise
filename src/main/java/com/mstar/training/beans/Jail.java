@@ -33,11 +33,9 @@ public class Jail {
 	private Region region;
 
 	@OneToMany(mappedBy = "officerJail")
-	@Column(nullable = false)
 	private List<Officer> officers;
 
 	@OneToMany(mappedBy = "inmateJail")
-	@Column(nullable = false)
 	private List<Inmate> inmates;
 
 	public Long getId() {
