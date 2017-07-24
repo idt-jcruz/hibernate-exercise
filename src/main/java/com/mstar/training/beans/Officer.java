@@ -23,7 +23,7 @@ public class Officer {
 	private String rank;
 
 	@ManyToOne
-	@JoinColumn(name="JAIL_ID", nullable = false)
+	@JoinColumn(name="JAIL_ID")
 	private Jail officerJail;
 	
 	@OneToOne
