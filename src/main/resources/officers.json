@@ -1,0 +1,22 @@
+[
+	{
+		"_class" : "com.mstar.training.beans.Officer",
+		"name" : "Jason 1",
+		"rank" : "SPO1",
+		"officerJail":  "New Bilibid Prison"
+	},
+	{
+		"_class" : "com.mstar.training.beans.Officer",
+		"name" : "Jason 2",
+		"rank" : "SPO2",
+		"officerJail":  "New Bilibid Prison",
+		"trustee":  "Jason 3"
+	},
+	{
+		"_class" : "com.mstar.training.beans.Officer",
+		"name" : "Jason 3",
+		"rank" : "SPO3",
+		"officerJail":  "Davao Prison",
+		"trustee":  "Jason 1"
+	}
+]

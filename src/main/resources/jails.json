@@ -1,0 +1,23 @@
+[
+	{
+		"_class" : "com.mstar.training.beans.Jail",
+		"name" : "New Bilibid Prison",
+		"address" : "Muntinlupa City",
+		"region":  "NCR",
+		"capacity" : 255
+	},
+	{
+		"_class" : "com.mstar.training.beans.Jail",
+		"name" : "Quezon City Jail",
+		"address" : "Quezon City",
+		"region":  "NCR",
+		"capacity" : 230
+	},
+	{
+		"_class" : "com.mstar.training.beans.Jail",
+		"name" : "Davao Prison",
+		"address" : "Davao City",
+		"region":  "REGION_IX",
+		"capacity" : 240
+	}
+]

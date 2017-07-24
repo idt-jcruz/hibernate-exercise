@@ -1,0 +1,32 @@
+[
+	{
+		"_class" : "com.mstar.training.beans.Inmate",
+		"name" : "Jason 1",
+		"controlNumber" : "NBP-01",
+		"inmateType":  "DETAINEE",
+		"inmateJail":  "New Bilibid Prison",
+		"commitmentDate" : "2015-04-04",
+		"endDate" : "",
+		"sentenceLength" : 1
+	},
+	{
+		"_class" : "com.mstar.training.beans.Inmate",
+		"name" : "Jason 2",
+		"controlNumber" : "NBP-02",
+		"inmateType":  "PRISONER",
+		"inmateJail":  "New Bilibid Prison",
+		"commitmentDate" : "2014-04-04",
+		"endDate" : "",
+		"sentenceLength" : 15
+	},
+	{
+		"_class" : "com.mstar.training.beans.Inmate",
+		"name" : "Jason 3",
+		"controlNumber" : "DP-01",
+		"inmateType":  "PRISONER",
+		"inmateJail":  "Davao Prison",
+		"commitmentDate" : "2015-04-04",
+		"endDate" : "",
+		"sentenceLength" : 12
+	}
+]
