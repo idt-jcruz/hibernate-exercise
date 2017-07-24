@@ -17,7 +17,7 @@ public class Inmate {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Column(name = "INMATE_NAME")
+	@Column(name = "INMATE_NAME", nullable = false)
 	private String name;
 
 	@Column(name = "CONTROL_NUMBER", nullable = false)
