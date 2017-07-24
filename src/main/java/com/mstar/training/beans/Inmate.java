@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -24,13 +25,16 @@ public class Inmate {
 
 	@Column(name = "CONTROL_NUMBER", nullable = false)
 	private String controlNumber;
-	
-	@Column(nullable=false)
+
+	@Column(nullable = false)
 	private String inmateStatus;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "JAIL_ID")
 	private Jail inmateJail;
+
+	@OneToOne(mappedBy = "trustee")
+	private Officer officer;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "COMMITMENT_DATE", nullable = false)
@@ -39,7 +43,7 @@ public class Inmate {
 	@Temporal(TemporalType.DATE)
 	@Column(name = "END_DATE")
 	private Date endDate;
-	
+
 	private int sentenceLength;
 
 	public Long getId() {
