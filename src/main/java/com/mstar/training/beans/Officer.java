@@ -9,6 +9,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.mstar.training.json.InmateJsonDeserializer;
+import com.mstar.training.json.JailJsonDeserializer;
+
 @Entity
 public class Officer {
 
@@ -24,10 +28,12 @@ public class Officer {
 
 	@ManyToOne
 	@JoinColumn(name = "JAIL_ID")
+	@JsonDeserialize(using = JailJsonDeserializer.class)
 	private Jail officerJail;
 
 	@OneToOne
 	@JoinColumn(name = "TRUSTEE_ID")
+	@JsonDeserialize(using = InmateJsonDeserializer.class)
 	private Inmate trustee;
 
 	public Long getId() {

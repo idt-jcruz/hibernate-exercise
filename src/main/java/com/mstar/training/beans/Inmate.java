@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +14,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.mstar.training.json.JailJsonDeserializer;
 
 @Entity
 public class Inmate {
@@ -23,14 +28,16 @@ public class Inmate {
 	@Column(name = "INMATE_NAME", nullable = false)
 	private String name;
 
-	@Column(name = "CONTROL_NUMBER", nullable = false)
+	@Column(name = "CONTROL_NUMBER", nullable = false, unique = true)
 	private String controlNumber;
 
+	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
-	private String inmateStatus;
+	private InmateType inmateType;
 
 	@ManyToOne
 	@JoinColumn(name = "JAIL_ID")
+	@JsonDeserialize(using = JailJsonDeserializer.class)
 	private Jail inmateJail;
 
 	@OneToOne(mappedBy = "trustee")
@@ -102,12 +109,28 @@ public class Inmate {
 		this.endDate = endDate;
 	}
 
-	public String getInmateStatus() {
-		return inmateStatus;
+	public InmateType getInmateType() {
+		return inmateType;
 	}
 
-	public void setInmateStatus(String inmateStatus) {
-		this.inmateStatus = inmateStatus;
+	public void setInmateType(InmateType inmateType) {
+		this.inmateType = inmateType;
+	}
+
+	public Officer getOfficer() {
+		return officer;
+	}
+
+	public void setOfficer(Officer officer) {
+		this.officer = officer;
+	}
+
+	public int getSentenceLength() {
+		return sentenceLength;
+	}
+
+	public void setSentenceLength(int sentenceLength) {
+		this.sentenceLength = sentenceLength;
 	}
 
 }
