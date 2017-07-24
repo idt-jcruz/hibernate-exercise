@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Inmate {
@@ -30,9 +32,11 @@ public class Inmate {
 	@JoinColumn(name = "JAIL_ID")
 	private Jail inmateJail;
 
+	@Temporal(TemporalType.DATE)
 	@Column(name = "COMMITMENT_DATE", nullable = false)
 	private Date commitmentDate;
 
+	@Temporal(TemporalType.DATE)
 	@Column(name = "END_DATE")
 	private Date endDate;
 	
