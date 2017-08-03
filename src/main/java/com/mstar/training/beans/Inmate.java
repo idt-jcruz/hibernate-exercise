@@ -18,6 +18,25 @@ import javax.persistence.TemporalType;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.mstar.training.json.JailJsonDeserializer;
 
+/**
+ *	Your score: (YES is 1 point)
+ *
+ *	Has Jail: YES
+ *	Correct Relationship w/ Jail: YES
+ *	Has Type: YES
+ *	Type is Enum: YES
+ *	Has Name: YES
+ *	Has Control Number: YES
+ *	Control Number is Unique: YES
+ *	Has Commitment Date: YES
+ *	Commitment Date is Timestamp: NO
+ *
+ *	Remarks:
+ *	1. The commitment date is required for budgeting meals for an inmate (breakfast, lunch & dinner), so on the commitment date itself it is important to know if the inmate has been served all 3 meals or not.
+ *
+ *	Final Score: 8 of 9
+ */
+
 @Entity
 public class Inmate {
 

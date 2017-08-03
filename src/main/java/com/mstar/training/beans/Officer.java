@@ -13,6 +13,19 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.mstar.training.json.InmateJsonDeserializer;
 import com.mstar.training.json.JailJsonDeserializer;
 
+/**
+ *	Your score: (YES is 1 point)
+ *
+ *	Has Name: YES
+ *	Has Jail: YES
+ *	Correct Relationship w/ Jail: YES
+ *	Has Rank: YES
+ *	Has Trustee: YES
+ *	Correct Relationship w/ Trustee: YES
+ *
+ *	Final Score: 6 of 6
+ */
+
 @Entity
 public class Officer {
 

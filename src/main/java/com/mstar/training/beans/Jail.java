@@ -11,6 +11,28 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+/**
+ * 	Your score: (YES is 1 point)
+ *
+ *	Has Name: YES
+ *	Has Address: YES
+ *	Has Type: NO
+ *	Type is Enum: N/A
+ *	Has Region: YES
+ *	Region is Enum: YES
+ *  Has Capacity: YES
+ *  Has Officers: YES
+ *  Correct Relationship w/ Officers: YES
+ *  Has Inmates: YES
+ *  Correct Relationship w/ Inmates: YES
+ *  
+ *  Remarks:
+ *  1. The type of the Jail was specified in the first paragraph specifically, '...and operation of all district, city and municipal jails in the Philippines...'
+ *  
+ *  Final Score: 9 of 11
+ *
+ */
+
 @Entity
 public class Jail {
 
